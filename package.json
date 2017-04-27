@@ -1,0 +1,24 @@
+{
+  "name": "fpl",
+  "version": "0.1.0",
+  "description": "A collection of functional JavaScript modules.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maiavictor/dattata.git"
+  },
+  "keywords": [
+    "datatypes",
+    "adts",
+    "functional"
+  ],
+  "author": "Victor Maia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maiavictor/FPL/issues"
+  },
+  "homepage": "https://github.com/maiavictor/FPL#readme"
+}
