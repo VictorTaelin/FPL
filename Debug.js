@@ -21,21 +21,31 @@ const callsPerSecond = (fn) => {
   return i * 2;
 }
 
-// Logs `x` and returns it.
-const trace = (x) => {
-  console.log(x);
-  return x;
-}
-
 // Logs `fn(x)`, returns x.
 const traceWith = (fn,x) => {
   console.log(fn(x));
   return x;
 }
 
+// Logs `x` and returns it.
+const trace = x =>
+  traceWith(x => x, x);
+
+// Logs `fn(x)` sampled, returns x.
+const sampleTraceWith = (id, delay, fn, x) => {
+  sample(id,delay, () => console.log(fn(x)));
+  return x;
+}
+
+// Logs `x` sampled and returns it.
+const sampleTrace = (id, delay, x) =>
+  sampleTraceWith(id, delay, x => x, x);
+
 module.exports = {
   sample,
   callsPerSecond,
   trace,
-  traceWith
+  traceWith,
+  sampleTrace,
+  sampleTraceWith
 }
