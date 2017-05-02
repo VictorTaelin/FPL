@@ -32,20 +32,20 @@ const trace = x =>
   traceWith(x => x, x);
 
 // Logs `fn(x)` sampled, returns x.
-const sampleTraceWith = (id, delay, fn, x) => {
+const traceSampleWith = (id, delay, fn, x) => {
   sample(id,delay, () => console.log(fn(x)));
   return x;
 }
 
 // Logs `x` sampled and returns it.
-const sampleTrace = (id, delay, x) =>
-  sampleTraceWith(id, delay, x => x, x);
+const traceSample = (id, delay, x) =>
+  traceSampleWith(id, delay, x => x, x);
 
 module.exports = {
   sample,
   callsPerSecond,
   trace,
   traceWith,
-  sampleTrace,
-  sampleTraceWith
+  traceSample,
+  traceSampleWith
 }
