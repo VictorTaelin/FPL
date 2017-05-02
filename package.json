@@ -1,6 +1,6 @@
 {
   "name": "fpl",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "description": "A collection of functional JavaScript modules.",
   "main": "index.js",
   "scripts": {
